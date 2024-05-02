@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changer with Image</title>
+    <title>Color Changer with Italic Font</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial Black', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
@@ -31,11 +31,13 @@
             cursor: pointer;
             margin-bottom: 20px;
             transition: color 0.3s ease;
+            font-style: italic; /* 기울어진 폰트 */
         }
 
         input[type="button"] {
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 10px 0; /* 수정된 부분 */
+            margin: 10px 5px; /* 수정된 부분 */
+            width: calc(50% - 10px); /* 수정된 부분 */
             border: none;
             cursor: pointer;
             background-color: #007bff;
@@ -69,17 +71,18 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="text_h1">Click to change to green</h1>
-    <h2 class="text_h2">Click to change to orange</h2>
+    <h1 class="text_h1">Click to change to red</h1>
+    <h2 class="text_h2">Click to change to blue</h2>
 
     <div class="color-changer">
         <label>Change background color:</label>
+        <br> <!-- 수정된 부분 -->
         <input type="button" value="Black">
         <input type="button" value="White">
     </div>
 
     <div class="image-container">
-        <img src="https://www.cocktailcloud.io/images/og.png" alt="Cocktail Cloud Image">
+        <img src="https://appexchange.salesforce.com/partners/servlet/servlet.FileDownload?file=00P4V0000161E29UAE" alt="SRM Image">
     </div>
 </div>
 
@@ -88,11 +91,11 @@
     var text_h2 = document.querySelector('.text_h2');
 
     text_h1.onclick = function () {
-        text_h1.style.color = (text_h1.style.color === 'green') ? 'black' : 'green';
+        text_h1.style.color = (text_h1.style.color === 'red') ? 'black' : 'red';
     };
 
     text_h2.onclick = function () {
-        text_h2.style.color = (text_h2.style.color === 'orange') ? 'black' : 'orange';
+        text_h2.style.color = (text_h2.style.color === 'blue') ? 'black' : 'blue';
     };
 
     document.querySelectorAll('.color-changer input[type="button"]').forEach(function(button) {
