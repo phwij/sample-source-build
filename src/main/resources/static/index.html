@@ -31,6 +31,7 @@
             cursor: pointer;
             margin-bottom: 20px;
             transition: color 0.3s ease;
+            color: black; /* 기본 텍스트 색상을 검정색으로 설정 */
         }
 
         input[type="button"] {
@@ -103,8 +104,8 @@
 
             document.body.style.backgroundColor = bgColor;
             document.body.style.color = textColor;
-            text_h1.style.color = textColor;
-            text_h2.style.color = textColor;
+            text_h1.style.color = 'black'; // 텍스트 색상을 항상 검정색으로 설정
+            text_h2.style.color = 'black'; // 텍스트 색상을 항상 검정색으로 설정
 
             // 'Change background color:' 텍스트 색상을 검정색으로 설정
             document.querySelector('.color-changer label').style.color = 'black';
