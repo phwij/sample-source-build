@@ -55,6 +55,7 @@
         .color-changer label {
             display: inline-block;
             margin-right: 10px;
+            color: black; /* 텍스트 색상을 검정색으로 고정 */
         }
 
         .image-container {
@@ -102,10 +103,11 @@
 
             document.body.style.backgroundColor = bgColor;
             document.body.style.color = textColor;
+            text_h1.style.color = textColor;
+            text_h2.style.color = textColor;
 
-            // 텍스트 색상 고정 설정
-            text_h1.style.color = 'black';
-            text_h2.style.color = 'black';
+            // 'Change background color:' 텍스트 색상을 검정색으로 설정
+            document.querySelector('.color-changer label').style.color = 'black';
         });
     });
 
@@ -114,6 +116,7 @@
         document.body.style.color = 'white';
         text_h1.style.color = 'black';
         text_h2.style.color = 'black';
+        document.querySelector('.color-changer label').style.color = 'black';
     }
 
 </script>
